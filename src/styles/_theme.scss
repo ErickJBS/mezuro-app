@@ -1,0 +1,9 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'variables';
+@import 'fonts';
+
+:root {
+  --bg-color: #{$background-color};
+  --app-font: #{$font-recursive};
+  --text-color: #{$text-color};
+}
