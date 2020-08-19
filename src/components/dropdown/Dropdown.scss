@@ -1,0 +1,85 @@
+$dropdown-height: 55px;
+$option-height: 45px;
+$transition-duration: 400ms;
+
+.dropdown {
+    max-width: 350px;
+
+    .dropdown-container {
+
+        .icon-container {
+            position: absolute;
+            width: 100%;
+            height: $dropdown-height;
+
+            .icon {
+                float: right;
+                margin-top: -6px;
+                color: black;
+                font-size: 24px;
+                padding: 15px;
+                transition-duration: $transition-duration;
+        
+                &.reverse {
+                    transform: rotate(180deg);
+                    transition-duration: $transition-duration;
+                }
+            }
+        }
+    
+        .select {
+            font-size: 18px;
+            height: $dropdown-height;
+            width: 100%;
+            padding: 15px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .options {
+        transition: all $transition-duration ease;
+
+        &.folded {
+            overflow: hidden;
+            max-height: 0;
+        }
+        
+        &.unfolded {
+            overflow: auto;
+            max-height: 350px;
+            visibility: visible;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+        
+        .search-bar {
+            width: 100%;
+            height: $dropdown-height;
+            background-color: white;
+
+            .search-input {
+                width: calc(100% - 10px);
+                height: $dropdown-height - 10px;
+                margin: 5px;
+            }
+        }
+        
+        .option {
+            width: 100%;
+            background-color: white;
+            height: $option-height;
+            border: 1px solid whitesmoke;
+
+            .option-title {
+                margin-top: 8px;
+                margin-bottom: 0px;
+                color: black;
+            }
+        }
+    }
+}
